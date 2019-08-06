@@ -19,6 +19,4 @@
 </script>
 
 <style scoped>
-.layout-search{
-}
 </style>

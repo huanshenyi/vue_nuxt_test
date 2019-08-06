@@ -3,10 +3,10 @@
         <el-container>
             <el-header>Header</el-header>
             <el-main>Main</el-main>
+            <ul v-if="list">
+                <li v-for="(item,index) in $store.state.navbar.app" :key="index">{{item}}</li>
+            </ul>
         </el-container>
-        <ul v-if="list">
-            <li v-for="(item,index) in $store.state.navbar.app" :key="index">{{item}}</li>
-        </ul>
     </div>
 </template>
 
@@ -20,12 +20,12 @@
                 list:[]
             }
         },
-        async asyncData() {
-           let {data:{list}} = await axios.get("http://127.0.0.1:5000/city/list")
-           return {
-               list
-           }
-        },
+        // async asyncData() {
+        //    let {data:{list}} = await axios.get("http://127.0.0.1:5000/city/list")
+        //    return {
+        //        list
+        //    }
+        // },
     }
 </script>
 
