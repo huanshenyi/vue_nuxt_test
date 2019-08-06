@@ -6,10 +6,10 @@
              <div class="sub-title">メールの存在確認して見ませんか?</div>
              <div style="margin-top: 15px;">
                  <el-row>
-                     <el-col :span="5">x</el-col>
+                     <el-col :span="5">&#12288;</el-col>
                      <el-col :span="7"><el-input placeholder="请输入内容" v-model="input2"></el-input></el-col>
-                     <el-col :span="7"><el-button type="primary" style="width: 100%">主要按钮</el-button></el-col>
-                     <el-col :span="5">x</el-col>
+                     <el-col :span="7"><el-button type="primary" style="width: 100%;border-style:none;border-radius: 0px">主要按钮</el-button></el-col>
+                     <el-col :span="5">&#12288;</el-col>
                  </el-row>
              </div>
          </el-main>
