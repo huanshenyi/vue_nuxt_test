@@ -27,8 +27,8 @@
 
 <style scoped>
 .components-footer{
+    margin-top: 1px;
     background-color:#f7fbfd;
-    position: absolute;
     bottom: 0;
     width: 100%;
     height: 180px;

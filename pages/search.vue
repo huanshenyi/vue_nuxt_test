@@ -1,11 +1,31 @@
 <template>
     <div>
+       <el-container>
+
+         <el-main>
+             <div class="sub-title">メールの存在確認して見ませんか?</div>
+             <div style="margin-top: 15px;">
+                 <el-row>
+                     <el-col :span="5">x</el-col>
+                     <el-col :span="7"><el-input placeholder="请输入内容" v-model="input2"></el-input></el-col>
+                     <el-col :span="7"><el-button type="primary" style="width: 100%">主要按钮</el-button></el-col>
+                     <el-col :span="5">x</el-col>
+                 </el-row>
+             </div>
+         </el-main>
+       </el-container>
+       <el-container>
+          <el-main>
+              <ul v-if="list">
+                  <li v-for="(item,index) in $store.state.navbar.app" :key="index">{{item}}</li>
+              </ul>
+          </el-main>
+       </el-container>
         <el-container>
-            <el-header>Header</el-header>
-            <el-main>Main</el-main>
-            <ul v-if="list">
-                <li v-for="(item,index) in $store.state.navbar.app" :key="index">{{item}}</li>
-            </ul>
+            <el-main>Main2</el-main>
+        </el-container>
+        <el-container>
+            <el-main>Main3</el-main>
         </el-container>
     </div>
 </template>
@@ -17,7 +37,8 @@
         layout: 'search',
         data(){
             return {
-                list:[]
+                list:[],
+                input2:''
             }
         },
         // async asyncData() {
@@ -30,22 +51,18 @@
 </script>
 
 <style scoped lang="css">
-    .el-header, .el-footer {
-        background-color: #B3C0D1;
-        color: #333;
-        text-align: center;
-        line-height: 60px;
+    .el-select .el-input {
+        width: 130px;
     }
-
-    .el-aside {
-        background-color: #D3DCE6;
+    .input-with-select .el-input-group__prepend {
+        background-color: #fff;
+    }
+    .el-header {
         color: #333;
         text-align: center;
         line-height: 200px;
     }
-
     .el-main {
-        background-color: #E9EEF3;
         color: #333;
         text-align: center;
         line-height: 160px;
